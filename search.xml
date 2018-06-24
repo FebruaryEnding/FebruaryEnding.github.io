@@ -11,7 +11,9 @@
       
         <tags>
             
-            <tag> centos7,mysql </tag>
+            <tag> centos7 </tag>
+            
+            <tag> mysql </tag>
             
         </tags>
       
