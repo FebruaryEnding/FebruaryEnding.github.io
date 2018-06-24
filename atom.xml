@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-06-13T14:34:30.047Z</updated>
+  <updated>2018-06-24T09:05:32.748Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>centos7安装mysql</title>
+    <link href="http://yoursite.com/2018/06/24/centos7-%E5%AE%89%E8%A3%85-mysql/"/>
+    <id>http://yoursite.com/2018/06/24/centos7-安装-mysql/</id>
+    <published>2018-06-24T08:53:37.000Z</published>
+    <updated>2018-06-24T09:05:32.748Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="获取yum-repository"><a href="#获取yum-repository" class="headerlink" title="获取yum repository"></a>获取yum repository</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -i -c http://dev.mysql.com/get/mysql57-community-release-el7-10.noarch.rpm</span><br></pre></td></tr></table></figure><h4 id="yum-安装"><a href="#yum-安装" class="headerlink" title="yum 安装"></a>yum 安装</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum -y install mysql57-community-release-el7-10.noarch.rpm</span><br><span class="line">yum -y install mysql-community-server</span><br></pre></td></tr></table></figure><h4 id="启动mysql"><a href="#启动mysql" class="headerlink" title="启动mysql"></a>启动mysql</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl start  mysqld.service</span><br><span class="line">systemctl status mysqld.service</span><br></pre></td></tr></table></figure><h4 id="找到数据库密码"><a href="#找到数据库密码" class="headerlink" title="找到数据库密码"></a>找到数据库密码</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep "password" /var/log/mysqld.log</span><br></pre></td></tr></table></figure><h4 id="登录数据库"><a href="#登录数据库" class="headerlink" title="登录数据库"></a>登录数据库</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -p</span><br></pre></td></tr></table></figure><h4 id="修改密码规则并修改密码"><a href="#修改密码规则并修改密码" class="headerlink" title="修改密码规则并修改密码"></a>修改密码规则并修改密码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; set global validate_password_policy=0;</span><br><span class="line">mysql&gt; set global validate_password_length=1;</span><br><span class="line">mysql&gt; ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED BY &apos;new password&apos;;</span><br><span class="line">mysql&gt; exit;</span><br></pre></td></tr></table></figure><h4 id="删除yum-reposiory"><a href="#删除yum-reposiory" class="headerlink" title="删除yum reposiory"></a>删除yum reposiory</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y remove mysql57-community-release-el7-10.noarch</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;获取yum-repository&quot;&gt;&lt;a href=&quot;#获取yum-repository&quot; class=&quot;headerlink&quot; title=&quot;获取yum repository&quot;&gt;&lt;/a&gt;获取yum repository&lt;/h4&gt;&lt;figure class=&quot;hi
+      
+    
+    </summary>
+    
+    
+      <category term="centos7,mysql" scheme="http://yoursite.com/tags/centos7-mysql/"/>
+    
+  </entry>
   
   <entry>
     <title>与猫的对话</title>
