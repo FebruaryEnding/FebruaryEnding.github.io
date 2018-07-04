@@ -3,6 +3,21 @@
   
     
     <entry>
+      <title>element下拉框动态生成</title>
+      <link href="/2018/07/04/element%E4%B8%8B%E6%8B%89%E6%A1%86%E5%8A%A8%E6%80%81%E7%94%9F%E6%88%90/"/>
+      <url>/2018/07/04/element%E4%B8%8B%E6%8B%89%E6%A1%86%E5%8A%A8%E6%80%81%E7%94%9F%E6%88%90/</url>
+      <content type="html"><![CDATA[<h5 id="记一次踩的坑把，其实蛮简单的主要就是v-if-和v-for的问题"><a href="#记一次踩的坑把，其实蛮简单的主要就是v-if-和v-for的问题" class="headerlink" title="记一次踩的坑把，其实蛮简单的主要就是v-if 和v-for的问题"></a>记一次踩的坑把，其实蛮简单的主要就是v-if 和v-for的问题</h5><p>直接上代码把 没有什么好说的 主要就是v-if的位置和写法</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-dropdown class=&quot;dropdown el-dropdown-link&quot;&gt;</span><br><span class="line">    &lt;span&gt;</span><br><span class="line">        &lt;i class=&quot;iconfont icon-size-and-color&quot;&gt;&amp;#xe610;&lt;/i&gt;</span><br><span class="line">    &lt;/span&gt;</span><br><span class="line">    &lt;el-dropdown-menu slot=&quot;dropdown&quot; v-if=&quot;!!user.hobbies &amp;&amp; user.hobbies.length &gt; 0&quot;&gt;</span><br><span class="line">        &lt;template v-for=&quot;item in user.hobbies&quot;&gt;</span><br><span class="line">&lt;el-dropdown-item @click.native=&quot;toHobby(item.domain)&quot;&gt;&#123;&#123; item.name &#125;&#125;&lt;/el-dropdown-item&gt;</span><br><span class="line">        &lt;/template&gt;</span><br><span class="line">    &lt;/el-dropdown-menu&gt;</span><br><span class="line">&lt;/el-dropdown&gt;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+        <tags>
+            
+            <tag> -vue -js -element </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>centos7安装mysql</title>
       <link href="/2018/06/24/centos7-%E5%AE%89%E8%A3%85-mysql/"/>
       <url>/2018/06/24/centos7-%E5%AE%89%E8%A3%85-mysql/</url>
